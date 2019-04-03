@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Anagrams</title><link rel="shortcut icon" href="assets/favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+  <script src="words.js"></script>
+  <script src="index.js"></script>
+  <!-- <script src="wordArray.js"></script>-->
+</head>
+<body onload="load();">
+  <center id="home" class="container">
+    <h1>Anagrams</h1>
+    <br><br><br><br>
+    <div class="btn" onclick="newGame();">Play</div>
+  </center>
+  <center id="game" class="container">
+    <div id="clock">
+      0:00
+    </div>
+    <h1 id="points">
+      <span id="label">PTS</span>
+    </h1><br>
+    <h1 id="letters"></h1>
+    <input id="answer" spellcheck="false" oninput="filter(this)"  />
+    <br><br>
+    <span id="wordCount">0 WORDS</span>
+    <div id="wordBank">
+      
+    </div>
+  </center>
+  <center id="end" class="container">
+    <h1 id="end_points"><span id="label">PTS</span></h1>
+    <br><br><br>
+    <div class="btn" onclick="newGame();">Play Again</div>
+    <br><br><br>
+    <span id="end_wordCount">0 WORDS</span>
+    
+    <div id="end_wordBank">
+      
+    </div>
+  </center>
+</body>
+</html>

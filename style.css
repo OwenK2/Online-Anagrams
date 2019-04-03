@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+#clock {
+  position: fixed;
+  right: 0;
+  top: 0;
+  font-weight: 900;
+  font-size: 2.5em;
+  padding: 10px;
+  color: #333;
+  border-bottom-left-radius: 7px;
+  background: rgba(0,0,0,.05);
+}
+#answer {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #333;
+  margin: 10px 20px;
+  font-weight: 900;
+}
+#wordCount, #end_wordCount {
+  font-size: 1em;
+  color: #666;
+}
+#points, #end_points {
+  display: inline-block;
+  color: #333;
+  position: relative;
+  padding: 10px 20px;
+  margin: 5% 0 0 0;
+  font-size: 4em;
+  background: rgba(0,0,0,.05);
+  border-radius: 4px;
+  font-weight: 900;
+}
+#letters {
+  font-size: 3em;
+  margin: 2% 0;
+}
+.letter {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #333;
+  padding: 10px 20px;
+  margin: 10px;
+  background: rgba(0,0,0,.05);
+  border-radius: 4px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.letter.on {
+  background: rgb(38,166,91, .3);
+}
+#label {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  font-size: 10px;
+  color: #666;
+  font-weight: bold;
+}
+.word {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #333;
+  margin: 10px;
+  font-weight: 900;
+}
+.btn {
+  padding: 12px 50px;
+  font-size: 1.1em;
+  display: inline-block;
+  cursor: pointer;
+  background: #26A65B;
+  color: white;
+  border-radius: 3px;
+  user-select: none;
+  transition: .3s background, .3s box-shadow;
+}
+.btn:hover {
+  background: #229652;
+}
+.btn:active {
+  background: #1f894b;
+  box-shadow: inset 0 0 6px 0 rgba(0,0,0,.1);
+}
+h1 {
+  font-size: 5em;
+  margin: 100px 0 20px 0;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #26a65b;
+  font-size: 1em;
+  margin: 10px;
+  outline: none;
+  font-family: inherit;
+}
+select {
+  padding: 9px 10px;
+}
+.container {
+  display: none;
+}
+#home {
+  display: block;
+}
