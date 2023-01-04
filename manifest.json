@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Anagrams",
+    "short_name": "Anagrams",
+    "version": "1.0.0",
+    "author": "Owen Kuhn",
+    "lang": "en-US",
+    "description": "Online anagram word game",
+    "categories": ["anagrams", "word", "online", "game", "words"],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "background_color": "#0A0A0A",
+    "theme_color": "#0A0A0A",
+    "icons": [{
+        "src": "assets/favicon.webp",
+        "sizes": "256x256",
+        "type": "image/webp",
+        "purpose": "any"
+    },
+    {
+        "src": "assets/favicon_maskable.webp",
+        "sizes": "256x256",
+        "type": "image/webp",
+        "purpose": "maskable"
+    }]
+}

@@ -1,112 +1,144 @@
+:root {
+    --font: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --monospace: "Fira Code", Inconsolata, "SFMono-Regular", "Consolas", "Menlo", monospace;
+    --background: #0A0A0A;
+    --bright: #FFF;
+    --text: #FEFEFE;
+    --dull: #666666;
+    --dullish: #999999;
+    --border: #3F4145;
+    --highlight: rgba(255, 255, 255, .05);
+    --highlight-hard: rgba(255, 255, 255, .1);
+    --accent: #26a65b;
+    --accent2: #3498DB;
+    --error: #D95757;
+    --box-shadow: rgba(0,0,0,.2);
+    --border-radius: 4px;
+    --shade: rgba(0, 0, 0, .5);
+}
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font);
 }
 #clock {
-  position: fixed;
-  right: 0;
-  top: 0;
-  font-weight: 900;
-  font-size: 2.5em;
-  padding: 10px;
-  color: #333;
-  border-bottom-left-radius: 7px;
-  background: rgba(0,0,0,.05);
+    position: fixed;
+    right: 0;
+    top: 0;
+    font-weight: 900;
+    font-size: 2.5em;
+    padding: 10px;
+    color: var(--dullish);
 }
 #answer {
-  font-size: 1em;
-  text-transform: uppercase;
-  color: #333;
-  margin: 10px 20px;
-  font-weight: 900;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-weight: 900;
 }
 #wordCount, #end_wordCount {
-  font-size: 1em;
-  color: #666;
+    font-size: .9em;
+    color: var(--dull);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 #points, #end_points {
-  display: inline-block;
-  color: #333;
-  position: relative;
-  padding: 10px 20px;
-  margin: 5% 0 0 0;
-  font-size: 4em;
-  background: rgba(0,0,0,.05);
-  border-radius: 4px;
-  font-weight: 900;
+    display: inline-block;
+    position: relative;
+    padding: 10px 30px;
+    margin: 5% 0 0 0;
+    font-size: 4em;
+    background: var(--highlight);
+    border-radius: 4px;
+    font-weight: 900;
 }
 #letters {
-  font-size: 3em;
-  margin: 2% 0;
+    font-size: 3em;
+    margin: 2% 0;
 }
 .letter {
-  display: inline-block;
-  text-transform: uppercase;
-  color: #333;
-  padding: 10px 20px;
-  margin: 10px;
-  background: rgba(0,0,0,.05);
-  border-radius: 4px;
-  font-weight: 900;
-  cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 10px;
+    background: var(--highlight);
+    border-radius: 4px;
+    font-weight: 900;
+    cursor: pointer;
 }
 .letter.on {
-  background: rgb(38,166,91, .3);
+    background: var(--accent);
 }
 #label {
-  position: absolute;
-  left: 50%;
-  bottom: 5px;
-  transform: translateX(-50%);
-  font-size: 10px;
-  color: #666;
-  font-weight: bold;
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--dull);
 }
 .word {
-  font-size: 1em;
-  text-transform: uppercase;
-  color: #333;
-  margin: 10px;
-  font-weight: 900;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 10px;
+    font-weight: 900;
 }
 .btn {
-  padding: 12px 50px;
-  font-size: 1.1em;
-  display: inline-block;
-  cursor: pointer;
-  background: #26A65B;
-  color: white;
-  border-radius: 3px;
-  user-select: none;
-  transition: .3s background, .3s box-shadow;
+    padding: 12px 50px;
+    font-size: 1.1em;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: var(--background);
+    border: 2px solid var(--text);
+    color: var(--text);
+    border-radius: 4px;
+    user-select: none;
+    transition: .3s background, text .3s, .3s box-shadow;
 }
 .btn:hover {
-  background: #229652;
+    background: var(--text);
+    color: var(--background);
 }
 .btn:active {
-  background: #1f894b;
-  box-shadow: inset 0 0 6px 0 rgba(0,0,0,.1);
+    box-shadow: inset 0 0 6px 0 var(--box-shadow);
 }
 h1 {
-  font-size: 5em;
-  margin: 100px 0 20px 0;
+    font-size: 5em;
+    margin: 100px 0 20px 0;
+    color: var(--bright);
 }
 
 input, select {
-  padding: 10px;
-  border: 1px solid #26a65b;
-  font-size: 1em;
-  margin: 10px;
-  outline: none;
-  font-family: inherit;
+    width: 95%;
+    box-sizing: border-box;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--background);
+    font-size: 1.5em;
+    margin: 10px;
+    outline: none;
+    font-family: inherit;
+}
+input:focus, select:focus {
+  border-color: var(--accent);
 }
 select {
-  padding: 9px 10px;
+    padding: 9px 10px;
 }
 .container {
-  display: none;
+    display: none;
 }
 #home {
-  display: block;
+    display: block;
+}
+
+@media screen and (max-width: 500px) {
+    #game {
+        padding-top: calc(2.5em + 30px);
+    }
 }
